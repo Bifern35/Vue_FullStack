@@ -9,6 +9,25 @@
 <script>
 import axios from 'axios'
 export default {
-    
+    name: 'employees',
+    data(){
+        return{
+            message:'Final Exam',
+            products: [],
+            pageSize:10,
+            pageIndex:1,
+            fields:[{
+                key:'EmployeeID',
+                sortable : true
+            },{
+                key:'LastName',
+                sortable : true
+            },{
+                key:'FirstName',
+                sortable : true,
+                // variant: 'danger'
+            }]        
+        }
+    }
 }
 </script>
