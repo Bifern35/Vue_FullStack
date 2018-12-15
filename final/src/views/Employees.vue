@@ -13,7 +13,7 @@ export default {
         return{
             message:'Final Exam',
             employees: [],
-            pageSize:5,
+            pageSize:3,
             pageIndex:1,
             fields:[{
                 key:'employee_id',
