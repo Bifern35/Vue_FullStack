@@ -5,3 +5,9 @@
         <b-pagination size="md" :total-rows="products.length" v-model="pageIndex" :per-page="pageSize"></b-pagination>
     </div>
 </template>
+<script>
+import axios from 'axios'
+export default {
+    
+}
+</script>
