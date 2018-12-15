@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h1>Employees List</h1>
-        <b-table striped hover :items="employees" :fields="fields" :per-page="pageSize" :current-page="pageIndex"></b-table>
-        <b-pagination size="md" :total-rows="products.length" v-model="pageIndex" :per-page="pageSize"></b-pagination>
+        <h6>Employees List</h6>
+        <b-table striped hover :items="employees" :fields="fields"></b-table>
+        <b-pagination size="md" :total-rows="employees.length" ></b-pagination>
     </div>
 </template>
 <script>
@@ -12,19 +12,28 @@ export default {
     data(){
         return{
             message:'Final Exam',
-            products: [],
-            pageSize:10,
-            pageIndex:1,
+            employees: [],
             fields:[{
-                key:'EmployeeID',
+                key:'employee_id',
                 sortable : true
-            },{
-                key:'LastName',
-                sortable : true
-            },{
-                key:'FirstName',
+            },
+            {
+                key:'first_name',
                 sortable : true,
-                // variant: 'danger'
+
+            },
+            {
+                key:'last_name',
+                sortable : true
+            },
+            {
+                key:'title',
+                sortable : true,
+
+            },
+            {
+                key:'city',
+                sortable : true
             }]        
         }
     },
