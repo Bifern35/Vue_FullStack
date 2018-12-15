@@ -28,6 +28,15 @@ export default {
                 // variant: 'danger'
             }]        
         }
+    },
+    mounted(){
+        var instance = this
+        axios
+        .get('https://pacific-fjord-41656.herokuapp.com/api/employees/')
+        .then(function(response){
+            console.log(response)
+            instance.employees = response.data.data
+        })
     }
 }
 </script>
